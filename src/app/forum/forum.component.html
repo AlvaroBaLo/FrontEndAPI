@@ -1,0 +1,70 @@
+<head>
+	
+ </head>
+<body>
+	<header>
+		<title class="text-center">Foro de discusión</title>
+		<nav class="navbar navbar-expand-sm navbar-light">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a routerLink="inicio" class="nav-link">Inicio</a>
+				</li>
+				<li>
+					<a routerLink="foros" class="nav-link">Foros </a>
+				</li>
+				<li>
+					<a routerLink="ayuda" class="nav-link">Ayuda</a>
+				</li>
+				<li>
+					<a routerLink="mi-cuenta" class="nav-link">Mi Cuenta</a>
+				</li>
+				</ul>
+			</nav>
+	</header>
+	<main>
+		<section>
+			<h1>Foro de discusión</h1>
+			<p>Bienvenido al foro de discusión. Aquí puedes compartir tus opiniones con otros usuarios sobre distintos temas.</p>
+			<form action="#" method="post">
+				<label for="buscar">Buscar:</label>
+				<input type="text" id="buscar" name="buscar" placeholder="Buscar Temas">
+				<button type="submit"class="btn btn-primary">Buscar</button>
+			</form>
+		</section>
+		<section>
+			<h2>Últimos temas</h2>
+			<ul>
+				<li>
+					<h3>Tema 1</h3>
+					<p>Descripción del tema 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Último mensaje por: <a href="#">Usuario 1</a></p>
+				</li>
+				<li>
+					<h3>Tema 2</h3>
+					<p>Descripción del tema 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Último mensaje por: <a href="#">Usuario 2</a></p>
+				</li>
+				<li>
+					<h3>Tema 3</h3>
+					<p>Descripción del tema 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Último mensaje por: <a href="#">Usuario 3</a></p>
+				</li>
+			</ul>
+			<button class="btn btn-outline-warning"><a href="#">Ver más temas</a></button>
+		</section>
+		<section>
+			<h2>Crear un nuevo tema</h2>
+			<form action="#" method="post">
+				<label for="titulo">Título:</label>
+				<input type="text" id="titulo" name="titulo">
+				<label for="mensaje">Mensaje:</label>
+				<textarea id="mensaje" name="mensaje"></textarea>
+				<button type="submit"class="btn btn-primary">Publicar</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<!-- Aquí van los enlaces a las redes sociales y el copyright -->
+		<p>© 2023 Foro de discusión. Todos los derechos reservados.</p>
+	</footer>
+</body>

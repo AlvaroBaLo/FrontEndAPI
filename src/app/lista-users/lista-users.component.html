@@ -1,0 +1,29 @@
+<h1 class="text-center">Gestion de usuarios</h1>
+<h2>Lista Usuarios</h2>
+<table class="table table-stripet">
+    <thead class="table-dark">
+        <tr class="text-center">
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Mail</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Password</th>
+            <th>Alias</th>
+            <th>Controles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.nombre}}</td>
+            <td>{{user.apellido}}</td>
+            <td>{{user.mail}}</td>
+            <td>{{user.fecha_nac}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.alias}}</td>
+            
+            <button (click)="updateUser(user.id)" class="btn btn-primary">Editar</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-info" style="margin-left: 10px;">Eliminar</button>
+            <button (click)="showDetailsUser(user.id)" class="btn btn-info" style="margin-left: 10px;">Detalles</button>
+        </tr>
+    </tbody>
+</table>
