@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="forum.component.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Kanit:wght@100;400&display=swap" rel="stylesheet">
+	<title>Forum</title>
+ </head>
+<body>
+	<div class="cabecera">
+		<div>
+			<h1>Foro de discusión</h1>
+		</div>
+		<div class="info">
+			<p><img src="./assets/recursos/icons8-user-16.png">Usuario en linea:</p>
+			<p><img src="./assets/recursos/icons8-mensaje-16.png">Mensajes: </p>
+		</div>
+	</div>
+	<header>
+		<title class="text-center">Foro de discusión</title>
+		<nav class="navbar navbar-expand-sm navbar-light">
+			<ul class="navbar-nav">
+				<!--No entendia lo de los enlaces con routerlink, luego he leido que se usan para trabajar con Angular, lo dejo tal cual ya que lo estás usando para  -->
+				<li class="nav-item">
+					<a routerLink="inicio" class="nav-link">INICIO</a>
+				</li>
+				<li>
+					<a routerLink="foros" class="nav-link">FOROS </a>
+				</li>
+				<li>
+					<a routerLink="ayuda" class="nav-link">AYUDA</a>
+				</li>
+				<li>
+					<a routerLink="mi-cuenta" class="nav-link">MI CUENTA</a>
+				</li>
+				</ul>
+			</nav>
+	</header>
+	<main>
+		<section class="busqueda">
+			<h3>Bienvenido al foro de discusión. Aquí puedes compartir tus opiniones con otros usuarios sobre distintos temas.</h3>
+			<form action="#" method="post">
+				<label for="buscar">Buscar:</label>
+				<input type="text" id="buscar" name="buscar" placeholder="Buscar Temas">
+				<button type="submit"class="btn btn-primary1">Buscar</button>
+			</form>
+		</section>
+		<section class="">
+			<h2 id="historico">Últimos temas</h2>
+			<div class="contenido">
+				<ul>
+					<li id="primero" (mouseover)="ngMouseOver('primero')" (mouseout)="ngMouseOut('primero')">
+						<h3><a href="#" id="tema1">Tema 1</a></h3>
+						<p>Descripción del tema 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean orci enim, sodales eget accumsan quis, bibendum sed tortor. Vestibulum augue ante, bibendum quis fermentum ac, pellentesque venenatis elit. Cras rutrum imperdiet ipsum et volutpat. </p>
+						<p>Último mensaje por: <a href="#" id="autor1">Usuario 1</a></p>
+					</li>
+					<li id="segundo" (mouseover)="ngMouseOver('segundo')" (mouseout)="ngMouseOut('segundo')">
+						<h3><a href="#" id="tema2">Tema 2</a></h3>
+						<p>Descripción del tema 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+						<p>Último mensaje por: <a href="#" id="autor2">Usuario 2</a></p>
+					</li>
+					<li id="tercero" (mouseover)="ngMouseOver('tercero')" (mouseout)="ngMouseOut('tercero')">
+						<h3><a href="#" id="tema3">Tema3</a></h3>
+						<p>Descripción del tema 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper accumsan lacinia. Sed pretium sapien pretium, lacinia est vel, volutpat sem. Ut et scelerisque lectus. Cras vel metus lacinia, gravida elit eu, auctor nulla. Aliquam ut ante non lectus viverra dictum.</p>
+						<p>Último mensaje por: <a href="#" id="autor3">Usuario 3</a></p>
+					</li>
+					<li id="cuarto" (mouseover)="ngMouseOver('cuarto')" (mouseout)="ngMouseOut('cuarto')">
+						<h3><a href="#" id="tema4">Tema 4</a></h3>
+						<p>Descripción del tema 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu orci dolor. Morbi imperdiet, ligula vel varius dictum, enim nisl faucibus urna, et mattis dolor felis gravida nibh. Aenean sit amet sem lobortis, vulputate leo sit amet, tincidunt ex. </p>
+						<p>Último mensaje por: <a href="#" id="{{user.alias}}">{{user.alias}}</a></p>
+					</li>
+				</ul>
+				<button class="btn btn-outline-warning"><a href="#">Ver más temas</a></button>
+			</div>
+		</section>
+		<section class="insert">
+			<h2>Crear un nuevo tema</h2>
+			<form action="#" method="post">
+				<label for="titulo">Título:</label>
+				<input type="text" id="titulo" name="titulo" placeholder="Escribe aquí el título" required>
+				<label for="mensaje">Mensaje:</label>
+				<textarea id="mensaje" name="mensaje" placeholder="Describe brevemente el tema" required></textarea>
+				<button type="submit" class="btn btn-primary2">Publicar Tema</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<!-- Aquí van los enlaces a las redes sociales y el copyright -->
+		<p>© 2023 Foro de discusión. Todos los derechos reservados.</p>
+		<p><a href="https://es-es.facebook.com/"><img src="./assets/recursos/fb50.png"></a></p>
+		<p><a href="https://twitter.com/?lang=es" target="_blank"><img src="./assets/recursos/twitter50.png"></a></p>
+		<p><a href="https://www.instagram.com/"><img src="./assets/recursos/inst50.png"></a></p>
+	</footer>
+	<script type="text/javaScript" src="forum.js"></script>
+</body>
+</html>
